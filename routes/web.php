@@ -14,9 +14,14 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/posts', [Postcontroller::class, 'index']);
+
+Route::get('/', function() {
+    return view('posts.index');
+});
+
 ?>
