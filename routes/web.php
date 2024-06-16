@@ -18,10 +18,10 @@ use App\Http\Controllers\PostController;
 //     return view('welcome');
 // });
 
-Route::get('/posts', [Postcontroller::class, 'index']);
+Route::get('/', [Postcontroller::class, 'index']);
 
-Route::get('/', function() {
-    return view('posts.index');
-});
+// Route::get('/', function() {
+//     return view('posts.index');
+// });
 
 ?>
