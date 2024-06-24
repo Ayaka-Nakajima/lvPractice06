@@ -14,6 +14,11 @@ class PostController extends Controller
         return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);
         //getPaginateByLimit()はPost.phpで定義したメソッドです。
     }
+    public function show(Post $post)
+    {
+        //dd($post);
+        return view('posts.show')->with(['post' => $post]);
+    }
 }
 //use宣言は外部にあるクラスをPostController内にインポートできる。
 //この場合、App\Models内のPostクラスをインポートしている。
