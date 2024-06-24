@@ -45,6 +45,12 @@ class PostController extends Controller
         
         return redirect('/posts.' . $post->id);
     }
+    
+    public function delete(Post $post)
+    {//論理削除を行いたい
+        $post->delete();
+        return redirect('/');
+    }
 }
 //use宣言は外部にあるクラスをPostController内にインポートできる。
 //この場合、App\Models内のPostクラスをインポートしている。
