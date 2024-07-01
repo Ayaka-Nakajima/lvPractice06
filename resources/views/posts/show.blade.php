@@ -9,7 +9,10 @@
 
     
     </head>
+    <x-app-layout>
     <body>
+        <a href="">{{ $post->category->name }}</a>
+        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         <h1 class = 'title'>
             {{ $post->title }}
         </h1>
@@ -26,4 +29,5 @@
             <a href = "/">戻る</a>
         </div>
     </body>
+    </x-app-layout>
 </html>
